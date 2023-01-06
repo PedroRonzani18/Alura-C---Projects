@@ -3,6 +3,6 @@
 int main()
 {
     game();
-
+/*asd*/
     return 0;
 }

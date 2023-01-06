@@ -1,4 +1,4 @@
-#include "Impressioes.h"
+#include "../Header/Impressioes.h"
 #include <iostream>
 
 void chutesErrados(std::vector<char> erros)

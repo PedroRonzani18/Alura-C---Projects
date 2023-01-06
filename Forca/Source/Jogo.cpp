@@ -1,6 +1,6 @@
-#include "Jogo.h"
-#include "Impressioes.h"
-#include "Parser.h"
+#include "../Header/Jogo.h"
+#include "../Header/Impressioes.h"
+#include "../Header/Parser.h"
 #include <iostream>
 
 std::vector<char> erros;
@@ -18,7 +18,7 @@ void endGame()
         std::cout << "Voce venceu!! Gostaria de adicionar uma nova palavra ao banco? (S/N) ";
         char resposta; std::cin >> resposta;
         if(std::toupper(resposta) == 'S')
-            adicionaPalavra("banco.txt");
+            adicionaPalavra("assets/banco.txt");
     }
 }
 
@@ -26,7 +26,7 @@ void setup()
 {
     srand(time(NULL));
 
-    std::vector<std::string> palavras = leitura("banco.txt");
+    std::vector<std::string> palavras = leitura("assets/banco.txt");
     palavra = palavras[rand()%(palavras.size())];
 
     for(size_t i=0; i<palavra.size(); i++) 

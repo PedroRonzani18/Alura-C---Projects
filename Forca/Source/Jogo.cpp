@@ -5,7 +5,7 @@
 
 #define MAX_NUM_TRIERS  6
 
-void endGame(const bool& venceu, const bool& perdeu, const std::string palavra)
+void endGame(const bool& venceu, const bool& perdeu, const std::string& palavra)
 {
     if(perdeu) std::cout << "Voce perdeu. A palavra era " << palavra << std::endl;
     if(venceu) 
@@ -17,7 +17,7 @@ void endGame(const bool& venceu, const bool& perdeu, const std::string palavra)
     }
 }
 
-void setup(std::string& palavra, std::string amostra)
+void setup(std::string& palavra, std::string& amostra)
 {
     srand(time(NULL));
 
@@ -31,7 +31,7 @@ void setup(std::string& palavra, std::string amostra)
     cabecalho(amostra);
 }
 
-void tentativa(int& tries, std::vector<char>& erros, std::string& palavra, std::string amostra)
+void tentativa(int& tries, std::vector<char>& erros, std::string& palavra, std::string& amostra)
 {
     char chute; std::cin >> chute; chute = std::toupper(chute);
 

@@ -12,7 +12,7 @@ int main()
     while(incorreto)
     {
         incorreto = false;
-        std::cout << "Nivel de dificuldade(1,2,3): " << std::endl;
+        std::cout << "Nivel de dificuldade (1,2,3): " << std::endl;
         int dificuldade; std::cin >> dificuldade;
 
         switch (dificuldade)

@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 
-std::vector<std::string> leitura(const std::string path)
+std::vector<std::string> leitura(const std::string& path)
 {
     std::fstream arquivo;
     std::string buffer;
@@ -21,7 +21,7 @@ std::vector<std::string> leitura(const std::string path)
     return words;
 }
 
-void adicionaPalavra(const std::string path)
+void adicionaPalavra(const std::string& path)
 {
     std::cout << "Palavra a ser adicionada: ";
     std::string aux; std::cin >> aux;

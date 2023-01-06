@@ -3,5 +3,5 @@
 #include <vector>
 #include <string>
 
-void chutesErrados(std::vector<char>);
-void cabecalho(std::string amostra);
+void chutesErrados(const std::vector<char>& erros);
+void cabecalho(const std::string& amostra);

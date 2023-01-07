@@ -1,0 +1,6 @@
+#include "../Header/Funcionario.h"
+
+Funcionario::Funcionario(Cpf cpf, std::string nome, float salario):
+    Pessoa(cpf,nome),
+    salario(salario)
+    {}

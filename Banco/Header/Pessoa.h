@@ -16,10 +16,9 @@ class Pessoa
 
         Cpf getCpf() const{return this->cpf;}
         std::string getNome() const{return this->nome;}
+        friend std::ostream& operator<<(std::ostream& cout, const Pessoa& titular);
 
     private:
         std::vector<std::string> tokenize(std::string s, std::string del);
         void verificaTamanhoNome();
-
-
 };

@@ -26,3 +26,10 @@ Pessoa::Pessoa(Cpf cpf, std::string nome):
     {
         verificaTamanhoNome();
     }
+
+std::ostream& operator<<(std::ostream& cout, const Pessoa& pessoa)
+{
+    std::cout << "Nome: " << pessoa.nome << std::endl;
+    std::cout << pessoa.cpf;
+    return cout;
+}

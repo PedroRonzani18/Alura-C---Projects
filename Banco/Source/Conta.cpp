@@ -13,3 +13,15 @@ void Conta::sacar(const float& saque)
     else if(saque * (1 + taxaDeSaque()) > saldo) std::cout << "Saldo insuficiente" << std::endl;
     else saldo -= saque * (1 + taxaDeSaque());
 }
+
+void Conta:: operator+=(float valor) {depositar(valor);}
+
+void Conta::operator-=(float valor) {sacar(valor);}
+
+std::ostream& operator<<(std::ostream& cout, const Conta& conta)
+{
+    std::cout << conta.getTitular();
+    std::cout << "Numero da Conta: " << conta.numero << std::endl;
+    std::cout << "Saldo: " << conta.saldo;
+    return cout;
+}

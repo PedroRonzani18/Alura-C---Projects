@@ -10,6 +10,6 @@ Conta::Conta(std::string numero, float saldo, Titular titular):
 void Conta::sacar(const float& saque)
 {
     if (saque < 0) std::cout << "Não se pode sacar valores negativos" << std::endl;
-    else if(saque * 1.05 > saldo) std::cout << "Saldo insuficiente" << std::endl;
-    else saldo -= saque * 1.05;
+    else if(saque * (1 + taxaDeSaque()) > saldo) std::cout << "Saldo insuficiente" << std::endl;
+    else saldo -= saque * (1 + taxaDeSaque());
 }

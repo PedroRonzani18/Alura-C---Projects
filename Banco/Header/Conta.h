@@ -19,8 +19,10 @@ class Conta
 
         std::string getNumero() const{return this->numero;}
         float getSaldo() const{return this->saldo;}
-        Titular getTitular(){return this->titular;}
+        Titular getTitular() const{return this->titular;}
 
         virtual void sacar(const float& saque);
         void depositar(const float& deposito){this->saldo += deposito;}
+
+        virtual float taxaDeSaque() const = 0;
 };

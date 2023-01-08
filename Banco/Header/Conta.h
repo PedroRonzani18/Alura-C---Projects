@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include <variant>
+
 #include "Titular.h"
 
 class Conta
@@ -14,6 +16,7 @@ class Conta
         float saldo;
 
     public:
+
         Conta(std::string numero, float saldo, Titular titular);
         virtual ~Conta(){}
 
@@ -21,12 +24,11 @@ class Conta
         float getSaldo() const{return this->saldo;}
         Titular getTitular() const{return this->titular;}
 
-        enum ResultadoSaque 
-        {
+        enum class ResultadoSaque {
             Sucesso, ValorNegativo, SalddoInsuficiente
         };
 
-        virtual void sacar(const float& saque);
+        virtual std::variant<ResultadoSaque,float> sacar(const float& saque);
         void depositar(const float& deposito){this->saldo += deposito;}
         virtual float taxaDeSaque() const = 0;
         

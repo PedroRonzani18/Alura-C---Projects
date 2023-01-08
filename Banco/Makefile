@@ -1,5 +1,5 @@
 CC = g++
-FLAGS= -std=c++14 -O2 -Wall
+FLAGS= -std=c++17 -O2 -Wall
 OUTPUT= main
 
 all:

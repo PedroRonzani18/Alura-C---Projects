@@ -7,11 +7,22 @@ Conta::Conta(std::string numero, float saldo, Titular titular):
     saldo(saldo)
     {}
 
-void Conta::sacar(const float& saque)
+std::variant<Conta::ResultadoSaque,float> Conta::sacar(const float& saque)
 {
-    if (saque < 0) std::cout << "Não se pode sacar valores negativos" << std::endl;
-    else if(saque * (1 + taxaDeSaque()) > saldo) std::cout << "Saldo insuficiente" << std::endl;
-    else saldo -= saque * (1 + taxaDeSaque());
+    if (saque < 0) 
+    {
+        std::cout << "Não se pode sacar valores negativos" << std::endl;
+        return ResultadoSaque::ValorNegativo;
+    }
+
+    if(saque * (1 + taxaDeSaque()) > saldo) 
+    {
+        std::cout << "Saldo insuficiente" << std::endl;
+        return ResultadoSaque::SalddoInsuficiente;
+    }
+
+    saldo -= saque * (1 + taxaDeSaque());
+    return saldo;
 }
 
 void Conta:: operator+=(float valor) {depositar(valor);}

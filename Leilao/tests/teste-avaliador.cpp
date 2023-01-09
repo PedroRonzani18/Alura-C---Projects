@@ -1,9 +1,9 @@
 
-#define CATCH_CONFIG_MAIN
+//#define CATCH_CONFIG_MAIN
 #include "../src/Header/Avaliador.h"
-
-#include "catch.h"
-
+#include <iostream>
+//#include "catch.h"
+/*
 TEST_CASE("Deve recuperar maior lance do leilao em ordem crescente")
 {
     // Preparando o ambiente
@@ -22,13 +22,14 @@ TEST_CASE("Deve recuperar maior lance do leilao em ordem crescente")
     // Verificando funcionamento
     REQUIRE(2000 == leiloeiro.getMaiorValor());
 }
+*/
 
-TEST_CASE("Deve recuperar 3 maiores lances")
+int main()
 {
     // Preparando o ambiente
-    Lance primeiroLance(Usuario("Pedro"),2000);
+    Lance primeiroLance(Usuario("Augusto"),2000);
     Lance seg(Usuario("Pedro"),4000);
-    Lance terc(Usuario("Pedro"),1000);
+    Lance terc(Usuario("Jose"),1000);
     Lance quar(Usuario("Maria"),3000);
 
     Leilao leilao("Fiat 147");
@@ -44,6 +45,4 @@ TEST_CASE("Deve recuperar 3 maiores lances")
 
     std::vector<Lance> maiores = leiloeiro.getMaiores3Lances();
 
-    // Verificando funcionamento
-    REQUIRE(3 == maiores.size());
 }

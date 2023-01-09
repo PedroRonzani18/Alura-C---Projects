@@ -7,5 +7,5 @@ testeAvaliador:
 	&& ./testando
 
 run: 
-	$(CC) -g *.cpp */*.cpp $(FLAGS) -o $(OUTPUT) \
+	$(CC) -g main.cpp src/Source/*.cpp $(FLAGS) -o $(OUTPUT) \
 	&& ./$(OUTPUT)

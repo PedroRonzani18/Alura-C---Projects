@@ -1,5 +1,6 @@
 #include "../Header/Avaliador.h"
 #include <algorithm>
+#include <iostream>
 
 Avaliador::Avaliador() : 
     maiorValor(0)

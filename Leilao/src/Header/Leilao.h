@@ -15,7 +15,7 @@ class Leilao
         Leilao(std::string descricao);
 
         const std::vector<Lance>& getLances() const{return lances;}
-        void addLance(const Lance& lance){lances.push_back(lance);}
+        void addLance(const Lance& lance);
 };
 
 #endif

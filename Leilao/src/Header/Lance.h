@@ -11,6 +11,7 @@ private:
 public:
     Lance(Usuario usuario, float valor);
     float getValor() const{return valor;}
+    Usuario getUsuario() const {return usuario;}
 };
 
 #endif 

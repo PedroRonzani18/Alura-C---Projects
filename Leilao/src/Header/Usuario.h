@@ -8,7 +8,7 @@ private:
     std::string nome;
 public:
     Usuario(std::string);
-    std::string recuperaNome() const;
+    std::string getNome() const{return nome;}
 };
 
 #endif /* Usuario_hpp */

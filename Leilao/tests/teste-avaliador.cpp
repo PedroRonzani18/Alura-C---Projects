@@ -3,7 +3,7 @@
 #include "../src/Header/Avaliador.h"
 #include <iostream>
 //#include "catch.h"
-/*
+
 TEST_CASE("Deve recuperar maior lance do leilao em ordem crescente")
 {
     // Preparando o ambiente
@@ -22,7 +22,7 @@ TEST_CASE("Deve recuperar maior lance do leilao em ordem crescente")
     // Verificando funcionamento
     REQUIRE(2000 == leiloeiro.getMaiorValor());
 }
-*/
+
 
 int main()
 {
